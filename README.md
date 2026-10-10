@@ -1,6 +1,6 @@
 # Nguyên mẫu GRU và FedAvg bằng NumPy
 
-Đây là kiểm tra kỹ thuật vòng học liên kết trên **chuỗi đặc trưng mô phỏng**, không phải phần mềm nhận diện hành vi lợn từ video. Mã được xây dựng với hỗ trợ AI cho báo cáo của Lê Thúy Hà. Sinh viên cần đọc, chạy lại và giải thích được trước khi trình bày.
+Đây là kiểm tra kỹ thuật vòng học liên kết trên **chuỗi đặc trưng mô phỏng**, không phải phần mềm nhận diện hành vi lợn từ video. Mã được xây dựng với sự hỗ trợ của AI.
 
 ## Cài đặt và chạy
 
@@ -23,7 +23,7 @@ Lệnh tái lập tại máy đã thực hiện thử nghiệm (PowerShell):
 - GRU 12 chiều ẩn, đầu phân loại 3 lớp, lan truyền ngược qua thời gian, SGD và giới hạn chuẩn gradient.
 - Ba máy khách có tỷ lệ lớp khác nhau; mỗi vòng học một epoch rồi FedAvg có trọng số theo số mẫu.
 - Đối chứng học riêng từng máy khách và học tập trung với cùng khởi tạo, số epoch và cùng tập kiểm tra.
-- 3 hạt giống cố định; xuất kết quả JSON, lịch sử loss CSV và trọng số NPZ.
+- 3 hạt giống (random seed) cố định; xuất kết quả JSON, lịch sử loss CSV và trọng số NPZ.
 - Kiểm tra gradient bằng sai phân hữu hạn tại một tọa độ của mỗi tensor, trung bình có trọng số, từ chối sai kích thước, giảm loss trên batch nhỏ, bất biến bộ chiếu và không có chuỗi trùng train/test.
 
 ## Đọc kết quả
